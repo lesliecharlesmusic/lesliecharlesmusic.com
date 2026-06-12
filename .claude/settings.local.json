@@ -1,0 +1,28 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(//Users/les/.claude/**)",
+      "Read(//Users/les/Library/**)",
+      "Bash(docker --version)",
+      "Read(//Applications/**)",
+      "Read(//usr/local/bin/**)",
+      "Read(//usr/bin/**)",
+      "Read(//Users/les/.docker/bin/**)",
+      "Bash(npm --version)",
+      "Bash(brew --version)",
+      "Bash(curl --version)",
+      "Bash(sw_vers)",
+      "Bash(gh auth *)",
+      "Bash(git --version)",
+      "Bash(brew list *)",
+      "Bash(git init *)",
+      "Bash(git add *)",
+      "Bash(git rm *)",
+      "Bash(git commit -m ' *)",
+      "Bash(git tag *)"
+    ],
+    "additionalDirectories": [
+      "/Users/les/.gemini/config"
+    ]
+  }
+}
