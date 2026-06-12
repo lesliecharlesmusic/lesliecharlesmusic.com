@@ -333,7 +333,7 @@ main {
 }
 
 .lecture-number {
-  font-size: calc(var(--xl) * 0.9);
+  font-size: calc(var(--xl) * 0.81);
   font-weight: 500;
   letter-spacing: -0.01em;
   margin-bottom: 0.75rem;
