@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects — Leslie Charles</title>
+  <meta name="description" content="A selected catalogue of recordings Leslie Charles has contributed to as bassist, producer, recording engineer, mixer, and composer.">
+  <link rel="canonical" href="https://lesliecharlesmusic.com/discography">
+  <meta property="og:title" content="Projects — Leslie Charles">
+  <meta property="og:description" content="A selected catalogue of recordings as bassist, producer, engineer, mixer, and composer.">
+  <meta property="og:url" content="https://lesliecharlesmusic.com/discography">
+  <meta property="og:type" content="website">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="site-nav" aria-label="Main navigation">
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="discography.html" class="active" aria-current="page">Work</a></li>
+      <li><a href="workshops.html">Education</a></li>
+      <li><a href="downloads.html">Downloads</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <div class="wrap">
+      <h1 class="page-title">Projects</h1>
+      <ul class="disc-grid" id="disc-grid">
+        <!-- Populated by discography.js -->
+      </ul>
+
+      <h2 class="section-title">Interactive Media</h2>
+      <ul class="disc-grid games-grid">
+        <li class="disc-item">
+          <a href="https://www.instagram.com/p/B6xO7cslOKS/" target="_blank" rel="noopener noreferrer">
+            <img src="Game Sound Design/Pokemon Tower Battle.png" alt="Pokemon Tower Battle" width="600" height="600" loading="lazy">
+          </a>
+          <div class="disc-caption">
+            <span class="disc-album">Pokemon Tower Battle</span>
+            <span class="disc-role">Music Composer, Sound Design</span>
+          </div>
+        </li>
+        <li class="disc-item">
+          <a href="https://www.instagram.com/p/CTeyfiKlVZ4/" target="_blank" rel="noopener noreferrer">
+            <img src="Game Sound Design/Card Wars.jpg" alt="Card Wars" width="600" height="600" loading="lazy">
+          </a>
+          <div class="disc-caption">
+            <span class="disc-album">Card Wars</span>
+            <span class="disc-role">Music Composer, Sound Design</span>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <a class="footer-icon" href="https://www.instagram.com/lesliecharles/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+      </svg>
+    </a>
+    <a class="footer-icon" href="https://lesliecharles.bandcamp.com" target="_blank" rel="noopener noreferrer" aria-label="Bandcamp">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M0 18.75l7.437-13.5H24L16.563 18.75z"/>
+      </svg>
+    </a>
+    <a class="footer-icon" href="https://soundcloud.com/lesliecharles" target="_blank" rel="noopener noreferrer" aria-label="SoundCloud">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+        <path d="M11.56 8.87V17h8.76c1.47 0 2.68-1.2 2.68-2.68a2.68 2.68 0 0 0-2.68-2.68c-.1 0-.2 0-.3.01-.2-2.35-2.14-4.19-4.52-4.19-1.16 0-2.22.44-3.01 1.14-.6.51-.93 1.2-.93 2.23zM0 15.16a1.88 1.88 0 1 0 3.76 0V9.37a1.88 1.88 0 0 0-3.76 0v5.79zM5.29 16.63a1.88 1.88 0 1 0 3.76 0V7.29a1.88 1.88 0 0 0-3.76 0v9.34z"/>
+      </svg>
+    </a>
+  </footer>
+
+  <script src="discography.js"></script>
+  <script>
+    (function () {
+      var grid = document.getElementById('disc-grid');
+
+      discography.forEach(function (item, i) {
+        var li = document.createElement('li');
+        li.className = 'disc-item';
+
+        var a = document.createElement('a');
+        a.href = item.link;
+        a.target = '_blank';
+        a.rel = 'noopener noreferrer';
+
+        var img = document.createElement('img');
+        img.src = item.art;
+        img.alt = item.album + ' by ' + item.artist;
+        img.width = 600;
+        img.height = 600;
+        img.loading = i < 8 ? 'eager' : 'lazy';
+
+        a.appendChild(img);
+        li.appendChild(a);
+
+        var caption = document.createElement('div');
+        caption.className = 'disc-caption';
+
+        var spanAlbum = document.createElement('span');
+        spanAlbum.className = 'disc-album';
+        spanAlbum.textContent = item.album;
+
+        var spanArtist = document.createElement('span');
+        spanArtist.className = 'disc-artist';
+        spanArtist.textContent = item.artist;
+
+        caption.appendChild(spanAlbum);
+        caption.appendChild(spanArtist);
+
+        if (item.role) {
+          var spanRole = document.createElement('span');
+          spanRole.className = 'disc-role';
+          spanRole.textContent = item.role;
+          caption.appendChild(spanRole);
+        }
+
+        li.appendChild(caption);
+        grid.appendChild(li);
+      });
+    }());
+  </script>
+
+</body>
+</html>
