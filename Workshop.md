@@ -10,7 +10,7 @@ My goal is not to tell you what to create. Creativity is personal. Instead, I wa
 
 These sessions are for people who are curious. People who are willing to ask questions. People who are not afraid to admit what they don't know. People who want to develop competency rather than collect shortcuts.
 
-More than anything, I hope these gatherings remind us that we are not alone in our pursuit of good craft. That learning can be exciting. That complexity is not something to fear. And that the process of understanding can be every bit as rewarding as the finished result.
+More than anything, I hope these gatherings remind us that we are not alone in our pursuit of good craft, that learning can be exciting, that complexity is not something to fear and that the process of understanding can be every bit as rewarding as the finished result.
 
 If you leave with more questions than you arrived with, a renewed sense of curiosity, and a deeper appreciation for the beauty of music and sound, then the workshop has done its job.
 
